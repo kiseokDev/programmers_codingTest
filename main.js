@@ -1,21 +1,15 @@
 function solution(s) {
-    const stack = [];
-    const queue = [...s];
-    if (arr[0] === ")") return false;
-    for (let i = 0; i < queue.length; i++) {
-        const queueLetter = queue.shift();
-        const stackLetter = stack[stack.length - 1];
-        if (!queueLetter) return true;
-        if (!stack.length && stackLetter === ")") {
-            stack.push(queueLetter);
-            break;
-        } else if (!stack.length) {
-            stack.push(queueLetter);
-            continue;
-        }
-        stackLetter === queueLetter ? stack.push(queueLetter) : stack.pop();
+    if (s[0] === ')') {
+        return false
     }
-    return stack.length === 0 ? true : false;
+    let balance = 0
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            balance += 1
+        } else {
+            balance -= 1
+        }
+        if (balance < 0) return false
+    }
+    return balance === 0 ? true : false
 }
-
-console.log(solution("()()"));
