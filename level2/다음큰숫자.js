@@ -14,3 +14,4 @@ function solution(n) {
 }
 
 const result = solution(35);
+
