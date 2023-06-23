@@ -9,3 +9,6 @@ function solution(N, A, B) {
 
     return round;
 }
+
+console.log(Math.abs(4 - 5) !== 1 ? true : false, Math.max(4, 5) % 2 !== 0)
+//2 인이유 ? 
