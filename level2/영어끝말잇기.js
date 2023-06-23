@@ -1,3 +1,4 @@
+//set사용 
 function solution(n, words) {
     let usedWords = new Set(); // 사용된 단어를 저장하는 Set
 

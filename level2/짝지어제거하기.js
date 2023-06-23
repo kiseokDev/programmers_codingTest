@@ -1,3 +1,4 @@
+//스택
 function solution(string) {
     const stack = [];
 
