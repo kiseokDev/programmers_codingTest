@@ -1,3 +1,4 @@
+
 function solution(s) {
     if (s[0] === ')') {
         return false
