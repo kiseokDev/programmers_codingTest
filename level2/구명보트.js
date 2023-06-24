@@ -1,4 +1,12 @@
 //탐욕법Greedy
+function solution(people, limit) {
+    people.sort(function (a, b) { return a - b });
+    for (var i = 0, j = people.length - 1; i < j; j--) {
+        if (people[i] + people[j] <= limit) i++;
+    }
+    return people.length - i;
+}
+
 function solution2(people, limit) {
     people.sort((a, b) => b - a);
 
@@ -33,10 +41,3 @@ console.log(solution([70, 50, 80, 50], 100))
 //3. 아니면 그냥 count ++
 
 
-function solution(people, limit) {
-    people.sort(function (a, b) { return a - b });
-    for (var i = 0, j = people.length - 1; i < j; j--) {
-        if (people[i] + people[j] <= limit) i++;
-    }
-    return people.length - i;
-}
